@@ -1,0 +1,48 @@
+.Login-container {
+    justify-content: center;
+    align-items: center;
+    margin-left: 550px;
+    width: 912px;
+    height: 655px;
+    background-color: #2F3948;
+    border-radius: 20px;
+}
+
+
+.Login-content {
+    display: flex;
+    padding: 0px 60px;
+    align-self: center;
+    gap: 40px;
+}
+
+.Login-container img {
+    width: 250px;
+    height: 250px;
+}
+
+.Login-info {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.login-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.login-inputs input{
+    width: 431px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.login-inputs button{
+    width: 200px;
+    height: 35px;
+}
