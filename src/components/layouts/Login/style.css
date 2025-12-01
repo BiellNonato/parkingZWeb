@@ -1,7 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+.Login{
+    
+    background-color: #000000;
+    
+}
+
 .Login-container {
-    justify-content: center;
-    align-items: center;
-    margin-left: 550px;
     width: 912px;
     height: 655px;
     background-color: #2F3948;
@@ -11,9 +20,13 @@
 
 .Login-content {
     display: flex;
-    padding: 0px 60px;
+    padding: 0px 55px;
     align-self: center;
     gap: 40px;
+}
+
+.Login-content p {
+    font-size: 30px;
 }
 
 .Login-container img {
@@ -28,21 +41,40 @@
     text-align: center;
 }
 
-.login-inputs{
+.login-inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
-.login-inputs input{
+.login-inputs input {
     width: 431px;
     height: 30px;
     border-radius: 10px;
+    background-color: #050505;
+    opacity: 50%;
 }
 
-.login-inputs button{
+.login-inputs ::placeholder {
+    color: rgb(255, 255, 255);
+    padding: 0px 8px;
+}
+
+.login-inputs button {
     width: 200px;
     height: 35px;
+    background-color: #000000;
+    color: black;
+    opacity: 50%;
+}
+
+.register-line p {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.register-line p span {
+    color: aquamarine;
 }
