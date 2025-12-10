@@ -4,7 +4,7 @@
     border-radius: 20px;
     background-color: #2F3948;
     padding: 25px 118px;
-    gap: 10px;
+    gap: 15px;
  }
 
  .list-info {
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:134px;
+    gap:135px;
 
  }
 

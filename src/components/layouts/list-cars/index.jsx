@@ -1,5 +1,5 @@
-import Opalao from "../../assets/Images/Opala.svg"
-import Arrow from "../../assets/Images/Arrow.svg"
+import Opalao from "../../../assets/Images/Opala.svg"
+import Arrow from "../../../assets/Images/Arrow.svg"
 import { Cards } from "../cards"
 import './style.css'
 

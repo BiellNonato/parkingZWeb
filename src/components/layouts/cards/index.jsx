@@ -1,4 +1,4 @@
-import car from "../../assets/Images/car-logo.svg"
+import car from "../../../assets/Images/car-logo.svg"
 import './style.css'
 
 export const Cards = ({placa, data, hora, cor}) =>{
