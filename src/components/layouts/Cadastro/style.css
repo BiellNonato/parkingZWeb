@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 912px;
-    height: 655px;
+    max-width: 540px; /* unified with Login (responsive) */
+    width: 100%;
+    height: 480px; /* unified height fallback */
     border-radius: 20px;
     background-color: #2F3948;
-    padding: 0px 55px;
+    padding: 12px 20px;
 }
 
 .Cadastro-content {
@@ -15,8 +16,8 @@
 }
 
 .Cadastro-content img {
-    width: 250px;
-    height: 250px;
+    width: 140px;
+    height: 140px;
 }
 
 .Cadastro-info {
@@ -27,20 +28,18 @@
     align-items: center;
 }
 
+
 .inputs-cadastro {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     flex-direction: column;
 }
 
 .inputs-cadastro input {
-    width: 431px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #050505;
-    opacity: 50%;
+    width: 100%;
+    max-width: 320px;
 }
 
 .inputs-cadastro ::placeholder {
@@ -49,10 +48,5 @@
 }
 
 .inputs-cadastro button {
-    width: 200px;
-    height: 35px;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    opacity: 50%;
-    padding: 5px;
+    min-width: 150px;
 }

@@ -11,18 +11,21 @@ body{
 }
 
 .Login-container {
-    width: 912px;
-    height: 655px;
+    /* reduced and unified size (responsive via index.css) */
+    max-width: 540px;
+    width: 100%;
+    height: 480px;
     background-color: #2F3948;
     border-radius: 20px;
+    padding: 16px 20px;
 }
 
 
 .Login-content {
     display: flex;
-    padding: 0px 55px;
+    padding: 0px 20px;
     align-self: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .Login-content p {
@@ -30,8 +33,8 @@ body{
 }
 
 .Login-container img {
-    width: 250px;
-    height: 250px;
+    width: 140px;
+    height: 140px;
 }
 
 .Login-info {
@@ -52,11 +55,9 @@ body{
 }
 
 .login-inputs input {
-    width: 431px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #050505;
-    opacity: 50%;
+    /* inputs now unified by global rules; keep local fallback */
+    width: 100%;
+    max-width: 320px;
 }
 
 .login-inputs ::placeholder {
@@ -65,12 +66,8 @@ body{
 }
 
 .login-inputs button {
-    width: 200px;
-    height: 35px;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    opacity: 50%;
-    padding: 5px;
+    /* use global button styles; local fallback */
+    min-width: 150px;
 }
 .register-line p {
     text-align: center;

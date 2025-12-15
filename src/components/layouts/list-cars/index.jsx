@@ -3,7 +3,7 @@ import Arrow from "../../../assets/Images/Arrow.svg"
 import { Cards } from "../cards"
 import './style.css'
 
-export const List_cars = () => {
+export const List_cars = ({ vehicles = [], onRequestExit = () => {} }) => {
     return (
         <section className="list-container">
                 <div className="up-container-list">
@@ -12,24 +12,19 @@ export const List_cars = () => {
                 <img id="img2" src={Arrow} alt="" />
                 </div>
                 <article className="content-card-list">
-                    <Cards
-                    placa="gtx-2024"
-                    data="17/12/2025"
-                    hora="17:55:25"
-                    cor="black"
-                    />
-                    <Cards
-                    placa="gtx-2024"
-                    data="17/12/2025"
-                    hora="17:55:25"
-                    cor="black"
-                    />
-                    <Cards
-                    placa="gtx-2024"
-                    data="17/12/2025"
-                    hora="17:55:25"
-                    cor="black"
-                    />
+                    {vehicles.length === 0 && (
+                        <p style={{ padding: 20 }}>Nenhum veículo no estacionamento</p>
+                    )}
+                    {vehicles.map((v) => (
+                        <Cards
+                          key={v.placa}
+                          placa={v.placa}
+                          data={new Date(v.entrada).toLocaleDateString()}
+                          hora={new Date(v.entrada).toLocaleTimeString()}
+                          cor={v.cor}
+                          onExit={() => onRequestExit(v.placa)}
+                        />
+                    ))}
                 </article>
         </section>
     )
