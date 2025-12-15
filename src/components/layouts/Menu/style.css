@@ -1,0 +1,102 @@
+/* Overlay container */
+.app-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none; /* only allow interactions inside panel/backdrop */
+}
+
+/* semi-transparent backdrop that fades in/out */
+.app-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.0);
+  backdrop-filter: blur(0px);
+  transition: background 220ms ease, backdrop-filter 220ms ease;
+  pointer-events: auto;
+}
+.app-menu-backdrop.open {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+}
+.app-menu-backdrop.closing {
+  background: rgba(0,0,0,0.0);
+  backdrop-filter: blur(0px);
+}
+
+/* panel that holds the menu items (near the page, top-right) */
+.app-menu-panel {
+  position: absolute;
+  right: 16px;
+  top: 56px; /* sit under header */
+  width: 260px;
+  max-width: calc(100% - 32px);
+  background: var(--card-bg, #111);
+  color: inherit;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 36px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10000;
+  transform: translateY(-6px) translateX(8px);
+  opacity: 0;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+  pointer-events: auto;
+}
+.app-menu-panel.open {
+  transform: translateY(0) translateX(0);
+  opacity: 1;
+}
+.app-menu-panel.closing {
+  transform: translateY(-6px) translateX(8px);
+  opacity: 0;
+}
+
+.app-menu-panel nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-menu-panel nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.app-menu-panel nav a:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.menu-close {
+  align-self: flex-end;
+  background: transparent;
+  color: inherit;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.app-menu nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.app-menu nav a:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+@media (max-width: 640px) {
+  .app-menu-panel {
+    right: 8px;
+    left: 8px;
+    top: 12px;
+    width: auto;
+  }
+}

@@ -1,0 +1,23 @@
+.app-toast {
+  position: fixed;
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%);
+  z-index: 11000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+  max-width: 90vw;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0.98;
+}
+.app-toast.info { background: rgba(10,10,10,0.9); }
+.app-toast.success { background: rgba(36,160,72,0.95); }
+.app-toast.error { background: rgba(190,40,60,0.95); }
+
+@media (max-width: 520px) {
+  .app-toast { top: 8px; padding: 8px 12px; font-size: 14px }
+}

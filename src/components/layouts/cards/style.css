@@ -27,13 +27,12 @@
     font-size: 20px;
 }
 
-.btn-exit {
-    background-color: #ff6b6b;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    min-width: 150px;
-    height: 40px;
+.card {
+        display: flex;
+        align-items: center;
+        gap: 99px;
+}
+
+.card:hover {
+    background: rgba(0,0,0,0.03);
 }

@@ -32,9 +32,22 @@ body {
 
 /* Shared responsive form/layout rules for uniform look */
 .Login-container,
-.Cadastro-container,
+.Cadastro-container {
+  /* increased size for login/cadastro pages for presentation */
+  max-width: 900px;
+  width: 100%;
+  min-height: 520px;
+  margin: 18px auto;
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .entrada-container,
 .container-page {
+  /* revert entrada/saida back to previous, smaller layout */
   max-width: 540px;
   width: 100%;
   margin: 12px auto;
